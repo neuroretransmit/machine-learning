@@ -1,4 +1,4 @@
-PROJECT := changeme
+PROJECT := ml
 
 include mk/directories.mk
 include mk/binaries.mk
@@ -28,11 +28,14 @@ $(TESTOBJECTS): $(TESTOBJDIR)%.o: $(TESTSRCDIR)%.cc
 	@mkdir -p $(@D)
 	$(CXX) $< -c -o $@
 
-run:
-	./$(BINARY)
+run: $(TESTBINARY)
+	./$<
+
+run-valgrind: $(TESTBINARY)
+	valgrind --leak-check=full ./$<
 
 clean:
-	rm -rf $(BINDIR) $(OBJDIR)
+	rm -rf $(BINDIR) $(OBJDIR) $(LIBDIR)
 
 # Use for debugging makefile variables
 #   $ make print-SOME_VAR
