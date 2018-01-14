@@ -29,6 +29,7 @@ MNISTDecoder::MNISTDecoder(MNISTType type, const string& fname) :
 MNISTDecoder::~MNISTDecoder()
 {
     this->file->close();
+    delete this->file;
 }
 
 MNISTLabelHeader MNISTDecoder::decode_label_header()
