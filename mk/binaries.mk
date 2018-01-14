@@ -1,0 +1,2 @@
+LIBRARY := $(LIBDIR)/lib$(PROJECT).so
+TESTBINARY := $(BINDIR)/$(PROJECT)-tests

@@ -1,0 +1,4 @@
+bin/
+obj/
+*.kdev4
+vgcore.*

@@ -1,0 +1,26 @@
+### If KDevelop is missing the references from ./include do the following ###
+
+To add the ./include directory to your KDevelop workspace do one of the following
+
+a.) If your project's .kdev4 file at the root of the heirarchy has the same name as the directory
+    it lives in, run:
+    
+       $ ./scripts/kdev-add-working-dir-include.sh
+    
+    It adds the following to .kdev4/<project name>.kdev4 (This file is different than the one in the root)
+    
+    Example:
+    
+        [CustomDefinesAndIncludes][ProjectPath0][Includes]
+        1=/home/jonesy/projects/cpp/libtdata/include/
+
+b.) If you like ugly manual ways of doing things...
+
+    Right click project and click "Open Configuration..."
+        1.) Select "Language Support"
+        2.) Under "Includes and Imports" tab type include/ and click the "+" icon.
+
+
+
+
+
