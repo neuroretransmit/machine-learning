@@ -7,7 +7,7 @@
 TEST(BackProp, XOR)
 {
     TrainingData xor_data = TrainingData("tests/data/xor.csv", 2);
-    BPNN xor_nn = BPNN({2, 2, 1});
+    BPNN xor_nn = BPNN({2, 3, 1});
     xor_nn.train(xor_data, 0.1, 1000);
     vector<vector<double>> xor_nn_out;
     
@@ -23,7 +23,7 @@ TEST(BackProp, XOR)
 TEST(BackProp, XNOR)
 {
     TrainingData xnor_data = TrainingData("tests/data/xnor.csv", 2);
-    BPNN xnor_nn = BPNN({2, 2, 1});
+    BPNN xnor_nn = BPNN({2, 3, 1});
     xnor_nn.train(xnor_data, 0.1, 2000);
     vector<vector<double>> xnor_nn_out;
     

@@ -3,3 +3,4 @@ lib/
 obj/
 *.kdev4
 vgcore.*
+.ycm_extra_conf.py
